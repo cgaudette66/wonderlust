@@ -76,6 +76,24 @@ body {
     display: grid;
     grid-template-columns: 1fr;
 }
+
+/* Skip Links - off screen */
+.skip-link {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  background: var(--form-control-color);
+  color: var(--soft-white);
+  padding: 8px;
+  z-index: 100;
+}
+
+/* Skip Links - view when tabbing */
+.skip-link:focus {
+  top: 0;
+  left: 0;
+}
+
 header, nav, article, footer {
     padding: 1rem;
 }
