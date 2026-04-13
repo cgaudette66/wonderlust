@@ -226,65 +226,68 @@
     <footer>
         <section id="contact-us">
             <h2>Contact Us</h2> <span id="required">(*required)</span>
+            <form id="form" action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
             
                 <div>
-                    <label>First Name<span>*</span></label>
-                    <input>
+                    <label for="fName">First Name<span>*</span></label>
+                    <input id="fName" type="text" name="fName" required>
                 </div>
                 <div>
-                    <label>Last Name<span>*</span></label>
-                    <input>
+                    <label for="lName">Last Name<span>*</span></label>
+                    <input id="lName" type="text" name="lName" required>
                 </div>
                 <div>
-                    <label>Email<span>*</span></label>
-                    <input>
+                    <label for="email">Email<span>*</span></label>
+                    <input id="email" type="email" name="email" required>
                 </div>
                 <div>
-                    <label>Phone<span>*</span></label>
-                    <input>
+                    <label for="phone">Phone<span>*</span></label>
+                    <input id="phone" type="tel" name="phone" required>
                 </div>
                 <fieldset id="preferred-contact">
                 <legend>Preferred Contact Method<span>*</span></legend>
                     <div> 
-                        <input>
-                        <label>Email</label>
+                        <input id="contact_email" type="radio" name="contact_email" value="Email" checked>
+                        <label for="contact_email">Email</label>
                     </div>
                     <div>
-                        <input>
-                        <label>Text</label>
+                        <input id="contact_text" type="radio" name="contact_text" value="Text">
+                        <label for="contact_text">Text</label>
                     </div>
                     <div>
-                        <input>
-                        <label>Phone</label>
+                        <input id="contact_phone" type="radio" name="contact_phone" value="Phone">
+                        <label for="contact_phone">Phone</label>
                     </div>
                 </fieldset>
                 <fieldset id="destination">
-                    <legend>Destination<span>*</span></legend>
-                    <select id="select-destination">
-                        <option>Choose</option>
-                        <option>Barcelona</option>
-                        <option>Granada</option>
-                        <option>Ibiza</option>
-                        <option>Madrid</option>
-                        <option>Majorca</option>
-                        <option>Seville</option>
-                        <option>Tenerife</option>
-                        <option>Valencia</option>
-                        <option>Other</option>
+                    <legend for="destination">Destination<span>*</span></legend>
+                    <select name="select-destination" id="select-destination" required>
+                        <option value="">Choose</option>
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Granada">Granada</option>
+                        <option value="Ibiza">Ibiza</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Majorca">Majorca</option>
+                        <option value="Seville">Seville</option>
+                        <option value="Tenerife">Tenerife</option>
+                        <option value="Valencia">Valencia</option>
+                        <option value="Other">Other</option>
                     </select>
                 </fieldset>
                 <fieldset id="travelTime">
-                    <legend>Travel Time<span>*</span></legend>
-                    <select id="select-travel-time">
-                        <option>Choose</option>
-                        <option>Fall</option>
-                        <option>Winter</option>
-                        <option>Spring</option>
-                        <option>Summer</option>
-                        <option>Flexible</option>
+                    <legend for="travelTime">Travel Time<span>*</span></legend>
+                    <select name="select-travel-time" id="select-travel-time" required>
+                        <option value="">Choose</option>
+                        <option value="Fall">Fall</option>
+                        <option value="Winter">Winter</option>
+                        <option value="Spring">Spring</option>
+                        <option value="Summer">Summer</option>
+                        <option value="Flexible">Flexible</option>
                     </select>
                 </fieldset>
-                <input>
+                <input type="submit" id="submit" name="submit" value="Submit">
+            </form>
+                
             
         </section>
         <section id="legal">
